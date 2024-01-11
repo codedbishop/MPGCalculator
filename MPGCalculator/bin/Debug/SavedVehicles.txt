@@ -1,0 +1,7 @@
+SUV,Toyota,4Runner,16,2234
+SUV,Ford,Escape,28,15
+Sedan,Honda,Accord,29,15
+Sedan,Subarue,WRX,17,13
+Sedan,Chevrolet,Camaro,19 ,13
+SUV,Ford,Expedition,23,36
+Truck,Ford,f150,23,36

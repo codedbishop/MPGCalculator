@@ -1,0 +1,7 @@
+C:\Users\dusti\source\repos\MPGCalculator\MPGCalculator\bin\Debug\MPGCalculator.exe.config
+C:\Users\dusti\source\repos\MPGCalculator\MPGCalculator\bin\Debug\MPGCalculator.exe
+C:\Users\dusti\source\repos\MPGCalculator\MPGCalculator\bin\Debug\MPGCalculator.pdb
+C:\Users\dusti\source\repos\MPGCalculator\MPGCalculator\obj\Debug\MPGCalculator.csproj.AssemblyReference.cache
+C:\Users\dusti\source\repos\MPGCalculator\MPGCalculator\obj\Debug\MPGCalculator.csproj.CoreCompileInputs.cache
+C:\Users\dusti\source\repos\MPGCalculator\MPGCalculator\obj\Debug\MPGCalculator.exe
+C:\Users\dusti\source\repos\MPGCalculator\MPGCalculator\obj\Debug\MPGCalculator.pdb
