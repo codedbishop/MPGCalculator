@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace MPGCalculator
 {
-
     internal class SaveLoad
     {
+        string fileName = "SavedVehicles.txt";
         //This function saves the list of vehicles to the file name
-        public static void SaveList(List<Vehicle> vehicles, string fileName)
+        public void SaveList(List<Vehicle> vehicles)
         {
             string path = Path.Combine(Environment.CurrentDirectory, fileName);//Sets the path to be saved  
 
@@ -23,14 +23,26 @@ namespace MPGCalculator
                 //Saves each vehicle in the list to the file   
                 foreach (var vehicle in vehicles)
                 {
-                    writer.WriteLine($"{vehicle.bodyType},{vehicle.make},{vehicle.model},{vehicle.mpg},{vehicle.tankSize}");
+                    switch (vehicle)
+                    {
+                        case GasVehicle gasVehicle:
+                            writer.WriteLine($"{gasVehicle.vehicleType},{gasVehicle.bodyType},{gasVehicle.make},{gasVehicle.model},{gasVehicle.mpg},{gasVehicle.tankSize}");
+                            break;
+                        case HybridVehicle hybridVehicle:
+                            writer.WriteLine($"{hybridVehicle.vehicleType},{hybridVehicle.bodyType},{hybridVehicle.make},{hybridVehicle.model},{hybridVehicle.mpg},{hybridVehicle.tankSize},{hybridVehicle.range}");
+                            break;
+                        case ElectricVehicle electricVehicle:
+                            writer.WriteLine($"{electricVehicle.vehicleType},{electricVehicle.bodyType},{electricVehicle.make},{electricVehicle.model},{electricVehicle.range}");
+                            break;
+                    }
                 }
             }
         }
 
         //This Function loads all the vehicles from the file and saves them as a list of vehicles and returns the list 
-        public static List<Vehicle> LoadList(string fileName)
+        public List<Vehicle> LoadList()
         {
+           
             List<Vehicle> loadedVehicles = new List<Vehicle>();
             string path = Path.Combine(Environment.CurrentDirectory, fileName);//Gets the file path 
 
@@ -44,21 +56,26 @@ namespace MPGCalculator
                     {
                         string[] parts = line.Split(',');//Separates the words into a list of strings
 
-                        //Checks that the data has the correct number variables, then creates the correct vehicle type and adds it to the list 
-                        if (parts.Length == 5)
+                        switch (parts[0])
                         {
-                            if (parts[0] == "SUV")
-                            {
-                                loadedVehicles.Add(new SUV(parts[1], parts[2], int.Parse(parts[3]), int.Parse(parts[4])));
-                            }
-                            else if (parts[0] == "Sedan")
-                            {
-                                loadedVehicles.Add(new Sedan(parts[1], parts[2], int.Parse(parts[3]), int.Parse(parts[4])));
-                            }
-                            else if (parts[0] == "Truck")
-                            {
-                                loadedVehicles.Add(new Truck(parts[1], parts[2], int.Parse(parts[3]), int.Parse(parts[4])));
-                            }
+                            case "Gas":
+                                if (Enum.TryParse(parts[1], out BodyStyles.bodyStyles gasBodyType))
+                                {
+                                    loadedVehicles.Add(new GasVehicle(gasBodyType, parts[2], parts[3], int.Parse(parts[4]), int.Parse(parts[5])));
+                                }
+                                break;
+                            case "Hybrid":
+                                if (Enum.TryParse(parts[1], out BodyStyles.bodyStyles hybridBodyType))
+                                {
+                                    loadedVehicles.Add(new HybridVehicle(hybridBodyType, parts[2], parts[3], int.Parse(parts[4]), int.Parse(parts[5]), int.Parse(parts[6])));
+                                }
+                                break;
+                            case "Electric":
+                                if (Enum.TryParse(parts[1], out BodyStyles.bodyStyles electricBodyType))
+                                {
+                                    loadedVehicles.Add(new ElectricVehicle(electricBodyType, parts[2], parts[3], int.Parse(parts[4])));
+                                }
+                                break;
                         }
                     }
                 }

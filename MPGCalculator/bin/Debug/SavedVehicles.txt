@@ -1,7 +1,14 @@
-SUV,Toyota,4Runner,16,2234
-SUV,Ford,Escape,28,15
-Sedan,Honda,Accord,29,15
-Sedan,Subarue,WRX,17,13
-Sedan,Chevrolet,Camaro,19 ,13
-SUV,Ford,Expedition,23,36
-Truck,Ford,f150,23,36
+Gas,SUV,Toyota,4Runner,16,22
+Gas,SUV,Ford,Escape,28,15
+Gas,Sedan,Honda,Accord,29,15
+Gas,Sedan,Subarue,WRX,17,13
+Gas,Sedan,Chevrolet,Camaro,19,13
+Gas,SUV,Ford,Expedition,23,36
+Gas,Truck,Ford,f150,23,36
+Gas,Truck,Toyota,Tocoma,17,20
+Gas,SUV,Toyota,RAV,4,4
+Electric,Sedan,Ford,Mustang Mach-E,312
+Electric,Sedan,Tesla,Model 3,272
+Electric,Sedan,Tesla,Model S,405
+Electric,Truck,Ford,F150 Lightning,320
+Hybrid,SUV,Jeep,Wrangler 4xe,22,17,21

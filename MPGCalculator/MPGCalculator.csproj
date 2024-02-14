@@ -43,17 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddVehicle.cs" />
+    <Compile Include="ActionSelector.cs" />
+    <Compile Include="AddNewVehicle.cs" />
+    <Compile Include="BodyStyles.cs" />
+    <Compile Include="ElectricVehicle.cs" />
+    <Compile Include="GasVehicle.cs" />
+    <Compile Include="HybridVehicle.cs" />
+    <Compile Include="InputValidation .cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Questions.cs" />
     <Compile Include="SaveLoad.cs" />
-    <Compile Include="Sedan.cs" />
-    <Compile Include="SUV.cs" />
-    <Compile Include="Truck.cs" />
+    <Compile Include="SelectVehicle.cs" />
     <Compile Include="Vehicle.cs" />
-    <Compile Include="VehicleListDisplay.cs" />
-    <Compile Include="VehicleTypeSelector.cs" />
+    <Compile Include="VehicleList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

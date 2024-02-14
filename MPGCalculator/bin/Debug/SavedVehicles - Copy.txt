@@ -1,0 +1,13 @@
+Gas,suv,Toyota,4Runner,16,22
+Gas,suv,Ford,Escape,28,15
+Gas,sedan,Honda,Accord,29,15
+Gas,sedan,Subarue,WRX,17,13
+Gas,sedan,Chevrolet,Camaro,19,13
+Gas,suv,Ford,Expedition,23,36
+Gas,truck,Ford,f150,23,36
+Gas,truck,Toyota,Tocoma,17,20
+Gas,suv,Toyota,RAV,4,4
+Electric,sedan,Ford,Mustang Mach-E,312
+Electric,sedan,Tesla,Model 3,272
+Electric,sedan,Tesla,Model S,405
+Electric,truck,Ford,F150 Lightning,320
