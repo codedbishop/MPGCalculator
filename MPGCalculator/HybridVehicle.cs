@@ -60,8 +60,6 @@ namespace MPGCalculator
             {
                 Console.WriteLine("You can travel the distance on a full battery.");
             }
-  
-            Console.WriteLine($"You will use {(milesTraveled / mpg).ToString("0.00")} Gallons.");
             GetTanksUsed(milesTraveled);
         }
 
